@@ -1,0 +1,11 @@
+from PIL import Image, ImageDraw, ImageFont
+import random
+num = str(random.randint(1, 99))
+im = Image.open('C:/Python27/tree.jpg')
+w,h = im.size
+w = w * 0.85
+h = h / 8
+font = ImageFont.truetype('C:/Windows/Fonts/ARIALN.TTF', 90)
+draw = ImageDraw.Draw(im)
+draw.text((w, h), num, font = font, fill = (255, 33, 33))
+im.save('C:/Python27/tree_num.png', 'png')
